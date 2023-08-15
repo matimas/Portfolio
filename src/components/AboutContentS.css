@@ -1,0 +1,44 @@
+.about {
+	width: 100%;
+	margin: 3rem 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.about .left {
+	text-align: center;
+	margin: auto;
+	padding: 1rem;
+	max-width: 650px;
+}
+.about .left p {
+	margin: 1.2rem 0;
+}
+
+.about .right {
+	width: 90%;
+	height: 100%;
+	text-align: center;
+	border: 2px solid #fff;
+	margin: auto;
+	padding: 1rem;
+	max-width: 350px;
+}
+.database,
+.backend,
+.fronted {
+	display: flex;
+	color: #fff;
+	text-decoration: none;
+	align-items: center;
+	justify-content: space-between;
+}
+.stack {
+	display: flex;
+}
+.stack li {
+	margin: 0 0.2rem;
+	cursor: pointer;
+}

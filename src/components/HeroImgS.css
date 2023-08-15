@@ -1,0 +1,93 @@
+.mask {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+}
+.into-img {
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+	object-fit: cover;
+}
+
+.mask::after {
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #000;
+	opacity: 0.8;
+}
+
+.hero {
+	height: 100%;
+	width: 100%;
+}
+.hero .content {
+	position: absolute;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 40%;
+	text-align: center;
+	z-index: 50;
+}
+.hero .content h1 {
+	font-size: 4rem;
+	padding: 2rem 0 2rem;
+}
+.hero .content p {
+	width: 40rem;
+	margin-bottom: 2rem 0 2rem;
+	font-size: 1.4rem;
+	font-weight: 200;
+}
+.profile {
+	position: absolute;
+	transform: translate(-50%, -42%);
+	top: 50%;
+	left: 80%;
+}
+.profile-img {
+	width: 30rem;
+	height: 50rem;
+}
+
+@media screen and (max-width: 640px) {
+	.hero .content {
+		transform: translate(-50%, -50%);
+	}
+	.hero .content h1 {
+		font-size: 3rem;
+	}
+	.hero .content p {
+		width: 20rem;
+	}
+	.hero .content {
+		top: 50%;
+		left: 50%;
+	}
+	.hero .profile {
+		display: none;
+	}
+}
+@media screen and (max-width: 1140px) {
+	.hero .content h1 {
+		font-size: 3rem;
+	}
+	.hero .content p {
+		font-size: 1.4rem;
+	}
+	.hero .content {
+		top: 50%;
+		left: 50%;
+	}
+	.hero .profile {
+		display: none;
+	}
+}
+.link {
+	margin-top: 2rem;
+}
