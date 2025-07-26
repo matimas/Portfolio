@@ -13,7 +13,7 @@ const ProjectCardData = [
 	{
 		imgsrc: MineCraftProImg,
 		title: 'MindCraft - משחק 2D',
-		description: 'משחק דמוי מיינקראפט תלת מימדי שפותח ב-JavaScript טהור. כולל מנוע פיזיקה, יצירת עולמות רנדומליים ומערכת בנייה אינטואיטיבית. פרוייקט מורכב המדגים יכולות תכנות מתקדמות.',
+		description: 'משחק דמוי מיינקראפט שפותח ב-JavaScript טהור. כולל מנוע פיזיקה, יצירת עולמות רנדומליים ומערכת בנייה אינטואיטיבית. פרוייקט מורכב המדגים יכולות תכנות מתקדמות.',
 		view: 'https://determined-kalam-fa8974.netlify.app/',
 		source: 'https://github.com/matimas/Bootcamp-Mindcraft-2d',
 	},
