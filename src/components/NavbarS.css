@@ -39,7 +39,7 @@
 		z-index: -3;
 		transition: 0.3s;
 	}
-	.nav-menu.avtive {
+	.nav-menu.active {
 		left: 0;
 	}
 	.nav-menu li {

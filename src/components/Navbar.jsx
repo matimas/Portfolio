@@ -1,6 +1,6 @@
 import './NavbarS.css';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { mdiInformation, mdiHomeAccount, mdiProjector } from '@mdi/js';
@@ -20,7 +20,12 @@ const Navbar = () => {
 		}
 	};
 
-	window.addEventListener('scroll', changeColor);
+	// window.addEventListener('scroll', changeColor);
+	useEffect(() => {
+		window.addEventListener('scroll', changeColor);
+		return () => window.removeEventListener('scroll', changeColor);
+	}, []);
+
 
 	return (
 		<div className={headerColor ? 'header header-bg' : 'header'}>
@@ -31,7 +36,7 @@ const Navbar = () => {
 					</h1>
 				</Link>
 			</div>
-			<ul className={isOpen ? 'nav-menu avtive' : 'nav-menu'}>
+			<ul className={isOpen ? 'nav-menu active' : 'nav-menu'}>
 				<li className='icons'>
 					<Link to='/'>
 						<Icon path={mdiHomeAccount} size={1} />
@@ -59,4 +64,4 @@ const Navbar = () => {
 	);
 };
 
-export default Navbar;
+export default React.memo(Navbar);

@@ -49,10 +49,12 @@
 	transform: translate(-50%, -42%);
 	top: 50%;
 	left: 80%;
+	animation: slideInFromLeft 3s ease-in-out;
 }
 .profile-img {
-	width: 30rem;
-	height: 50rem;
+	border-radius: 50%;
+	width: 320px;
+	animation: rollFromLeft 3.5s ease-in-out;
 }
 
 @media screen and (max-width: 640px) {
@@ -90,4 +92,26 @@
 }
 .link {
 	margin-top: 2rem;
+}
+
+@keyframes slideInFromLeft {
+	0% {
+		left: -20%;
+		opacity: 0;
+	}
+	100% {
+		left: 80%;
+		opacity: 1;
+	}
+}
+
+@keyframes rollFromLeft {
+	0% {
+		transform: translateX(-400px) rotate(0deg);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0) rotate(720deg);
+		opacity: 1;
+	}
 }

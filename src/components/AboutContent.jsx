@@ -1,6 +1,6 @@
 import './AboutContentS.css';
 
-import React from 'react';
+import React ,{useCallback} from 'react';
 
 import Icon from '@mdi/react';
 import {
@@ -23,7 +23,7 @@ import FirebaseIcon from '../assets/firebase.png';
 const PDF_FILE_URL = 'http://localhost:3000/mati__misganow_pdf-1.pdf';
 
 const AboutContent = () => {
-	const downloadFileAtUrl = (url) => {
+	const downloadFileAtUrl = useCallback((url) => {
 		fetch(url)
 			.then((response) => response.blob())
 			.then((blob) => {
@@ -36,7 +36,7 @@ const AboutContent = () => {
 				aTag.click();
 				aTag.remove();
 			});
-	};
+	}, []);
 	return (
 		<div className='about'>
 			<div className='left'>
@@ -156,4 +156,4 @@ const AboutContent = () => {
 	);
 };
 
-export default AboutContent;
+export default React.memo(AboutContent);

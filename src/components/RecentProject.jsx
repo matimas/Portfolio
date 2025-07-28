@@ -3,18 +3,18 @@ import React from 'react';
 import ProjectCardData from './ProjectData';
 import ProjectCard from './ProjectCard';
 
-const projects = ProjectCardData.map((project, index) => (
-	<ProjectCard
-		key={index}
-		imgsrc={project.imgsrc}
-		title={project.title}
-		description={project.description}
-		source={project.source}
-		view={project.view}
-	/>
-));
-
 const RecentProject = () => {
+	const projects = ProjectCardData.map((project, index) => (
+		<ProjectCard
+		  key={index}
+		  imgsrc={project.imgsrc}
+		  title={project.title}
+		  description={project.description}
+		  source={project.source}
+		  view={project.view}
+		/>
+	  ));
+
 	return (
 		<div className='work-container'>
 			<div className='project-heading'>

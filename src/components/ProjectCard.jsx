@@ -1,9 +1,9 @@
 import './ProjectCardS.css';
-import React from 'react';
+import React, { useCallback } from 'react';
 import { FaExternalLinkAlt, FaGithub, FaCode, FaEye } from 'react-icons/fa';
 
 const ProjectCard = ({ title, imgsrc, description, view, source }) => {
-	// הגדרת טכנולוגיות בהתאם לפרוייקט
+	// הגדרת טכנולוגיות לפרוייקט
 	const getTechStack = (title) => {
 		if (title.includes('מטבעות') || title.includes('Crypto')) {
 			return ['React', 'API', 'Chart.js'];
@@ -20,7 +20,6 @@ const ProjectCard = ({ title, imgsrc, description, view, source }) => {
 	return (
 		<div className='project-card-modern'>
 			<div className='card-inner'>
-				{/* Front Side */}
 				<div className='card-front'>
 					<div className='card-image-container'>
 						<img src={imgsrc} alt={title} className='card-image' />
@@ -43,27 +42,27 @@ const ProjectCard = ({ title, imgsrc, description, view, source }) => {
 					<div className='card-back-content'>
 						<h3 className='card-title-back'>{title}</h3>
 						<p className='card-description'>{description}</p>
-						
+
 						<div className='tech-stack'>
-							{techStack.map((tech, index) => (
-								<span key={index} className='tech-badge'>{tech}</span>
+							{techStack.map((tech) => (
+								<span key={tech} className='tech-badge'>{tech}</span>
 							))}
 						</div>
 
 						<div className='card-actions'>
-							<a 
-								href={view} 
-								target='_blank' 
-								rel='noopener noreferrer' 
+							<a
+								href={view}
+								target='_blank'
+								rel='noopener noreferrer'
 								className='action-btn view-btn'
 							>
 								<FaEye />
 								<span>צפייה באתר</span>
 							</a>
-							<a 
-								href={source} 
-								target='_blank' 
-								rel='noopener noreferrer' 
+							<a
+								href={source}
+								target='_blank'
+								rel='noopener noreferrer'
 								className='action-btn source-btn'
 							>
 								<FaGithub />
@@ -81,4 +80,4 @@ const ProjectCard = ({ title, imgsrc, description, view, source }) => {
 	);
 };
 
-export default ProjectCard;
+export default React.memo(ProjectCard);

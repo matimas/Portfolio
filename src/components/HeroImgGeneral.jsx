@@ -13,4 +13,4 @@ const HeroImgGeneral = ({ heading, text }) => {
 	);
 };
 
-export default HeroImgGeneral;
+export default React.memo(HeroImgGeneral);

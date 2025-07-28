@@ -24,7 +24,7 @@ const HeroImg = () => {
 				</p>
 				<div className='link'>
 					<Link to='/project' className='btn'>
-						Project
+						See My Projects
 					</Link>
 				</div>
 			</div>
@@ -35,4 +35,4 @@ const HeroImg = () => {
 	);
 };
 
-export default HeroImg;
+export default React.memo(HeroImg);

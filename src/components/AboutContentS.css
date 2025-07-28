@@ -5,6 +5,7 @@
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
+	animation: slideInFromTop 2s ease-in-out;
 }
 
 .about .left {
@@ -41,4 +42,14 @@
 .stack li {
 	margin: 0 0.2rem;
 	cursor: pointer;
+}
+@keyframes slideInFromTop {
+	0% {
+		left: -20%;
+		opacity: 0;
+	}
+	100% {
+		left: 80%;
+		opacity: 1;
+	}
 }
