@@ -1,6 +1,6 @@
 import './ProjectCardS.css';
 import React from 'react';
-import ProjectCardData from './ProjectData';
+import ProjectCardData from '../assets/data/ProjectData';
 import ProjectCard from './ProjectCard';
 
 const RecentProject = () => {

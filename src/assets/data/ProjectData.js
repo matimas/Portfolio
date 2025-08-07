@@ -1,8 +1,9 @@
-import CriptoProImg from '../assets/cripto-prj.png';
-import MineCraftProImg from '../assets/Mindcraft.png';
-import CoronaProImg from '../assets/corona-statistic.png';
+import CriptoProImg from '../cripto-prj.png';
+import MineCraftProImg from '../Mindcraft.png';
+import CoronaProImg from '../corona-statistic.png';
+import GeniusChatImg from '../GeniusChatImg.png';
 
-const ProjectCardData = [
+const ProjectData = [
 	{
 		imgsrc: CriptoProImg,
 		title: 'חדשות מטבעות דיגיטליים',
@@ -24,6 +25,13 @@ const ProjectCardData = [
 		view: 'https://objective-bell-421b78.netlify.app/',
 		source: 'https://github.com/matimas/Bootcamp-Covid#readme',
 	},
+	{
+		imgsrc: GeniusChatImg,
+		title: 'Genius Chat',
+		description: 'פלטפורמת צ\'אט מבוססת React וNode/Express עם אימות JWT, היסטוריית שיחות בMongoDB, רקעים אנימטיביים בVanta.js ועיבוד שפה בזמן אמת עם OpenAI API',
+		view: 'https://geniuschat-client.netlify.app/',
+		source: 'https://github.com/matimas/GeniusChat-Client',
+	},
 ];
 
-export default ProjectCardData;
+export default ProjectData;

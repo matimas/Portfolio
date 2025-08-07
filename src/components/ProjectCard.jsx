@@ -1,5 +1,5 @@
 import './ProjectCardS.css';
-import React, { useCallback } from 'react';
+import React from 'react';
 import { FaExternalLinkAlt, FaGithub, FaCode, FaEye } from 'react-icons/fa';
 
 const ProjectCard = ({ title, imgsrc, description, view, source }) => {
